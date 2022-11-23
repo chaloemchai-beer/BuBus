@@ -7,7 +7,7 @@
 }
 #tracking {
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   right: 7px;
   padding: 10px;
   z-index: 400;
@@ -17,7 +17,7 @@
 }
 #route {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   right: 7px;
   padding: 10px;
   z-index: 400;
