@@ -11,7 +11,7 @@ const Navbar = () => {
       <ListView />
       <div className="navbar">
         <img src={logo} alt="" className="logo" />
-        <Link to="/map">
+        <Link to="/">
           <img src={returnimg} alt="" className="img_search" />
         </Link>
       </div>

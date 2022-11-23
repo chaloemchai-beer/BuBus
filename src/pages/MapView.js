@@ -15,7 +15,7 @@ import { Navigate } from "react-router-dom";
 const MapView = () => {
   const shouldredirect = true;
   // eslint-disable-next-line no-lone-blocks
-  {shouldredirect && <Navigate replace to="/map" />;}
+  {shouldredirect && <Navigate replace to="/" />;}
   const [center] = useState({
     lat: 14.039510690161817,
     lng: 100.61504273205924,
