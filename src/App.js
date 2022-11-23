@@ -1,6 +1,10 @@
 import MapView from "./pages/MapView";
 import "./styles/App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 import MainPage from "./pages/MainPage";
 
 function App() {
@@ -8,8 +12,9 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route exact path="/" element={<MainPage />} />
           <Route path="/map" element={<MapView />} />
+          <Route path="*" element={<MapView />} />
         </Routes>
       </Router>
     </div>
