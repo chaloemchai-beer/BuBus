@@ -6,6 +6,7 @@ import {
   Routes,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

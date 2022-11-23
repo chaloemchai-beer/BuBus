@@ -7,6 +7,9 @@ import "leaflet/dist/leaflet.css";
 import { useRef, useState } from "react";
 import useGeoLocation from "../leaflet/userGeoLocation";
 import "../styles/App.css";
+import marker from "../assets/marker.png";
+import route from "../assets/route.png";
+import ListView from "../components/ListView";
 
 const MapView = () => {
   const [center] = useState({
@@ -32,12 +35,14 @@ const MapView = () => {
 
   return (
     <>
+      <ListView />
       <MapContainer
         center={center}
         zoom={ZOOM_LEVEL}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         className="map-view"
         ref={mapRef}
+        zoomControl={false}
       >
         <TileLayer
           attribution={osm.maptiler.attribution}
@@ -61,11 +66,10 @@ const MapView = () => {
           ></Marker>
         )}
         <button id="tracking" onClick={showMyLocation}>
-          <img
-            src="https://www.iconbunny.com/icons/media/catalog/product/5/9/595.13-tracking-icon-iconbunny.jpg"
-            alt=""
-            className="img_tracking"
-          />
+          <img src={marker} alt="" className="img_tracking" />
+        </button>
+        <button id="route" onClick={showMyLocation}>
+          <img src={route} alt="" className="img_tracking" />
         </button>
       </MapContainer>
     </>

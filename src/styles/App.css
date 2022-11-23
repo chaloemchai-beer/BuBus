@@ -1,7 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
 .map-view {
   width: 100vw;
   height: 100vh;
   z-index: 10;
+}
+#tracking {
+  position: absolute;
+  bottom: 100px;
+  right: 7px;
+  padding: 10px;
+  z-index: 400;
+  border-radius: 40px;
+  border: 0 solid white;
+  background-color: white;
+}
+#route {
+  position: absolute;
+  bottom: 40px;
+  right: 7px;
+  padding: 10px;
+  z-index: 400;
+  border-radius: 40px;
+  border: 0 solid white;
+  background-color: white;
+}
+.img_tracking {
+  width: 100%;
+  height: 3.5vh;
+}
+.mainpage {
+  width: 100%;
 }
 .list-view {
   background-color: white;
@@ -14,17 +43,49 @@
   width: 322px;
   z-index: 30;
 }
-#tracking {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px;
-  z-index: 400;
+.list-view-brand,
+.list-view-total {
+  background-color: white;
+  border-bottom: 1px solid gray;
+  flex-shrink: 0;
+  padding: 20px;
 }
-.img_tracking {
-  width: 100%;
-  height: 4vh;
+.list-view-locations {
+  border-bottom: 1px solid gray;
+  flex-grow: 1;
+  position: relative;
+  overflow-y: auto;
 }
-.mainpage {
-  width: 100%;
+.list-view-location {
+  background-color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+.list-view-location:first-child {
+  margin-top: 20px;
+}
+.list-view-location:last-child {
+  margin-bottom: 20px;
+}
+.list-view-location:not(:last-child) {
+  border-bottom: 1px solid grayr;
+}
+.list-view-location:hover {
+  background-color: #eee;
+}
+.list-view-location.selected {
+  color: white;
+  background-color: black;
+}
+.list-view-location.selected .title {
+  color: white;
+}
+
+.btn_close {
+  width: 50px;
+  height: 5vh;
+  border: none;
+  background-color: white;
+  font-size: 30px;
+  padding-left: 80%;
 }
