@@ -6,12 +6,16 @@ import bubustop from "../data/busstop.json";
 import "leaflet/dist/leaflet.css";
 import { useRef, useState } from "react";
 import useGeoLocation from "../leaflet/userGeoLocation";
-import "../styles/App.css";
+import "../styles/MapView.css";
 import marker from "../assets/marker.png";
 import route from "../assets/route.png";
-import ListView from "../components/ListView";
+import Navbar from "../components/Navbar";
+import { Navigate } from "react-router-dom";
 
 const MapView = () => {
+  const shouldredirect = true;
+  // eslint-disable-next-line no-lone-blocks
+  {shouldredirect && <Navigate replace to="/map" />;}
   const [center] = useState({
     lat: 14.039510690161817,
     lng: 100.61504273205924,
@@ -35,7 +39,7 @@ const MapView = () => {
 
   return (
     <>
-      <ListView />
+      <Navbar />
       <MapContainer
         center={center}
         zoom={ZOOM_LEVEL}
