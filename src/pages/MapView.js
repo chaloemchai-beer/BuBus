@@ -7,7 +7,6 @@ import "leaflet/dist/leaflet.css";
 import { useRef, useState } from "react";
 import useGeoLocation from "../leaflet/userGeoLocation";
 import "../styles/App.css";
-import ListView from "../components/ListView";
 
 const MapView = () => {
   const [center] = useState({
@@ -33,7 +32,6 @@ const MapView = () => {
 
   return (
     <>
-    {/* <ListView /> */}
       <MapContainer
         center={center}
         zoom={ZOOM_LEVEL}
