@@ -4,13 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
-../trackingData
+Trackn
 
 # testing
 /coverage
 
 # production
 /build
+/trackingData
 
 # misc
 .DS_Store
