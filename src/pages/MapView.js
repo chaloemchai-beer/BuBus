@@ -9,7 +9,6 @@ import useGeoLocation from "../utils/userGeoLocation";
 import "../styles/MapView.css";
 import marker from "../assets/marker.png";
 import Navbar from "../components/Navbar";
-import Tracking from "../trackingData/Tracking";
 
 const MapView = () => {
   const [center] = useState({
@@ -35,7 +34,6 @@ const MapView = () => {
   console.log();
   return (
     <>
-      <Tracking />
       <Navbar />
       <MapContainer
         center={center}
