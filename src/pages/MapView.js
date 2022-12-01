@@ -1,21 +1,17 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import osm from "../leaflet/osm-provider";
+import osm from "../utils/osm-provider";
 import { markerIcon } from "../components/MarkerIcon";
 import bubustop from "../data/busstop.json";
 
 import "leaflet/dist/leaflet.css";
 import { useRef, useState } from "react";
-import useGeoLocation from "../leaflet/userGeoLocation";
+import useGeoLocation from "../utils/userGeoLocation";
 import "../styles/MapView.css";
 import marker from "../assets/marker.png";
-import route from "../assets/route.png";
 import Navbar from "../components/Navbar";
-import { Navigate } from "react-router-dom";
+import Tracking from "../trackingData/Tracking";
 
 const MapView = () => {
-  const shouldredirect = true;
-  // eslint-disable-next-line no-lone-blocks
-  {shouldredirect && <Navigate replace to="/" />;}
   const [center] = useState({
     lat: 14.039510690161817,
     lng: 100.61504273205924,
@@ -36,9 +32,10 @@ const MapView = () => {
       alert(location.error.message);
     }
   };
-
+  console.log();
   return (
     <>
+      <Tracking />
       <Navbar />
       <MapContainer
         center={center}
@@ -71,9 +68,6 @@ const MapView = () => {
         )}
         <button id="tracking" onClick={showMyLocation}>
           <img src={marker} alt="" className="img_tracking" />
-        </button>
-        <button id="route" onClick={showMyLocation}>
-          <img src={route} alt="" className="img_tracking" />
         </button>
       </MapContainer>
     </>

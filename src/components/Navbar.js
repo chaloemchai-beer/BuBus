@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Navbar.css";
 import ListView from "./ListView";
-import search from "../assets/search.png";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import "../styles/Search.css";
+import bubustop from "../data/busstop.json";
 
 const Navbar = () => {
   return (
@@ -11,9 +11,15 @@ const Navbar = () => {
       <ListView />
       <div className="navbar">
         <img src={logo} alt="" className="logo" />
-        <Link to="/search">
-          <img src={search} alt="" className="img_search" />
-        </Link>
+        <div className="box">
+          <select className="selectbox">
+            {bubustop.map((busstop, idx) => (
+              <option value={busstop.id} key={idx}>
+                {busstop.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </>
   );
