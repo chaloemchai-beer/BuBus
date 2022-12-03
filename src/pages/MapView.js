@@ -35,7 +35,7 @@ const MapView = () => {
   const LeafletRoutingMachine = () => {
     L.Routing.control({
       waypoints: [
-        L.latLng(14.03986908208239, 100.61025726185726),
+        L.latLng(location.coordinates.lat,location.coordinates.lng),
         L.latLng(selected),
       ],
       createMarker: function (i, wp, nWps) {
