@@ -22,7 +22,7 @@ li a {
   width: 100%;
   padding: 10px;
   height: 10vh;
-  z-index: 100;
+  z-index: 400;
   border: 0 solid white;
   background-color: #D9D9D9;
 }
@@ -35,5 +35,12 @@ li a {
 }
 .box {
   margin-top: 30px;
+}
+
+.leaflet-routing-container {
+  position: relative;
+  top: 80vh;
+  height: 100%;
+  width: 100vw;
 }
 
