@@ -39,7 +39,7 @@ li a {
 
 .leaflet-routing-container {
   position: relative;
-  top: 80vh;
+  top: 60vh;
   height: 100%;
   width: 100vw;
 }
