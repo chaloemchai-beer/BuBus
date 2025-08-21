@@ -1,7 +1,7 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import osm from "../utils/osm-provider";
 import { markerIcon } from "../components/MarkerIcon";
-import bubustop from "../data/busstop.json";
+import bubustop from "../data/location";
 import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
